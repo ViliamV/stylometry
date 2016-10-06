@@ -75,15 +75,16 @@ if __name__ == '__main__':
     #read twitter credentials
     with open('twitter-API.txt', 'r') as credentials:
         for line in credentials:
-            tag, placeholder, data = line.strip().split(' ')
-            if tag == 'consumer_key':
-                consumer_key = data
-            elif tag == 'consumer_secret':
-                consumer_secret = data
-            elif tag == 'access_key':
-                access_key = data
-            elif tag == 'access_secret':
-                access_secret = data
+            if line[0] != '#':                
+                tag, placeholder, data = line.strip().split(' ')
+                if tag == 'consumer_key':
+                    consumer_key = data
+                elif tag == 'consumer_secret':
+                    consumer_secret = data
+                elif tag == 'access_key':
+                    access_key = data
+                elif tag == 'access_secret':
+                    access_secret = data
     with open('accounts.txt', 'r') as f:
         for meno in f:
             get_all_tweets(meno.strip())    
