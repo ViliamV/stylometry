@@ -34,6 +34,6 @@ In Python, import `nltk` and download Model `punkt`.
 #### 5. Run stylometry
 - Edit `classification.py` and change value `UNKNOWN` to unknown author's account.
 ```python
-    UNKNOWN="example_account"
+    28 UNKNOWN="example_account"
 ```
 - Run `classification.py`.
