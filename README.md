@@ -28,7 +28,7 @@ In Python, import `nltk` and download Model `punkt`.
 #### 4. Download tweets
 - Create `accounts.txt` in main directory and put there account's names to download, one in each line. Put the unknown author's account last.
 - Create directory `data` in main directory.
-- Run `tweet-downloader` and wait. Due to Twitter API speed, it might take a while.
+- Run `tweet-downloader.py` and wait. Due to Twitter API speed, it might take a while.
 - Verify if `data` contains downloaded tweets.
     
 #### 5. Run stylometry
