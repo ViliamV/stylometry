@@ -32,8 +32,8 @@ In Python, import `nltk` and download Model `punkt`.
 - Verify if `data` contains downloaded tweets.
     
 #### 5. Run stylometry
-- Edit `classification.py` and change value `UNKNOWN` to unknown author's account.
+- Edit `classification.py` and change value `UNKNOWN` (line 28) to unknown author's account.
 ```python
-    28 UNKNOWN="example_account"
+    UNKNOWN="example_account"
 ```
 - Run `classification.py`.
