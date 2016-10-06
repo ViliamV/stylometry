@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import tweepy #https://github.com/tweepy/tweepy
 import csv
 import pickle
