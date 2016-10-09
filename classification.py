@@ -24,9 +24,10 @@ def clean_batch(batch):
 # constatnts
 NO_TWEETS_IN_BATCH = 50
 NUM_TOP_WORDS = 5000 
-SELECTOR_K = 100 #number of used features
+SELECTOR_K = 500 #number of used features
 TRAIN_PART = 0.75
 UNKNOWN = 'neznamy'
+#UNKNOWN = 'jindrichsidlo'
 
 # load tools
 sentence_tokenizer = nltk.data.load('tokenizers/punkt/czech.pickle')
@@ -115,6 +116,8 @@ forest.fit(features_train, labels_train)
 pred = forest.predict(features_test)    
 print('Classifier trained with accuracy score: ', accuracy_score(labels_test, pred))
 print('Suspect is predicted as:')
-print(forest.predict(suspect))   
+suspect_classified = list(forest.predict(suspect))
+for s in set(suspect_classified):
+    print('{0} - {1:.2f}%'.format(s, suspect_classified.count(s)/len(suspect_classified)*100))   
 
 
